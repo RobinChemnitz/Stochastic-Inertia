@@ -1,0 +1,291 @@
+{
+  "description": "Historical validation of the bundled publication data, retained unchanged. Labels F-, F0 and F+ correspond to F1, F2 and F3. Run verify.py for checks against the current code.",
+  "records": {
+    "Ms_summary": {
+      "metadata": {
+        "domain": "Ms",
+        "box": [
+          -2.1,
+          -0.8,
+          -2.0,
+          2.0
+        ],
+        "mu": 10.0,
+        "epsilon": 0.1,
+        "grid": [
+          65,
+          65
+        ],
+        "ode": {
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "max_step": 0.1
+        },
+        "marked_point": [
+          -1.6,
+          0.1
+        ],
+        "all_faces_absorbing": true,
+        "noise": "sqrt(2*sigma) independent Brownian increments in x,y",
+        "cycle_metadata": {
+          "model": {
+            "mu": 10.0,
+            "epsilon": 0.1,
+            "box": [
+              1.1,
+              2.2,
+              -0.6,
+              0.2
+            ]
+          },
+          "period": 19.078369566920912,
+          "closure_error": 5.980635621882338e-12,
+          "last_period_change": 9.890754881780595e-12,
+          "solver": "DOP853",
+          "rtol": 1e-10,
+          "atol": 1e-12,
+          "max_step": 0.02,
+          "integration_duration": 200.0
+        }
+      },
+      "fields": {
+        "Gamma": {
+          "valid": 4225,
+          "invalid": 0,
+          "minimum": -370.236638702038,
+          "maximum": 19085.740764509603,
+          "positive_fraction": 0.9564497041420118
+        },
+        "D": {
+          "valid": 4225,
+          "invalid": 0,
+          "minimum": -62.666945596596776,
+          "maximum": 865.9089908967613,
+          "positive_fraction": 0.9285207100591716
+        }
+      },
+      "checks": [
+        {
+          "point": [
+            -1.6,
+            0.1
+          ],
+          "standard": {
+            "E0": 3.714239059427227,
+            "Gamma": 13.940164677677522,
+            "D": 49.66086796941671
+          },
+          "tight": {
+            "E0": 3.7142390594175922,
+            "Gamma": 13.940164693980984,
+            "D": 49.66086799732023
+          },
+          "scaled_change": {
+            "Gamma": 1.1695314976322071e-09,
+            "D": 5.618815366975582e-10
+          }
+        },
+        {
+          "point": [
+            -0.81,
+            0.0
+          ],
+          "standard": {
+            "E0": 0.14412924774595412,
+            "Gamma": -370.2366387020379,
+            "D": -54.36617846302437
+          },
+          "tight": {
+            "E0": 0.14412924725177212,
+            "Gamma": -370.2366412859902,
+            "D": -54.36617864635725
+          },
+          "scaled_change": {
+            "Gamma": 6.979191085469386e-09,
+            "D": 3.3721862398449035e-09
+          }
+        },
+        {
+          "point": [
+            -2.09,
+            -0.4923076923076922
+          ],
+          "standard": {
+            "E0": 0.044725214397267204,
+            "Gamma": 19085.740764513474,
+            "D": 865.9089908964112
+          },
+          "tight": {
+            "E0": 0.04472521439277597,
+            "Gamma": 19085.740758049695,
+            "D": 865.9089905130194
+          },
+          "scaled_change": {
+            "Gamma": 3.386705775501014e-10,
+            "D": 4.4276224336618356e-10
+          }
+        },
+        {
+          "point": [
+            -0.81,
+            -0.06153846153846143
+          ],
+          "standard": {
+            "E0": 0.24916493839959256,
+            "Gamma": -237.65368738342835,
+            "D": -62.66694559659672
+          },
+          "tight": {
+            "E0": 0.24916493857174696,
+            "Gamma": -237.6536868635299,
+            "D": -62.66694551083647
+          },
+          "scaled_change": {
+            "Gamma": 2.1876304225497892e-09,
+            "D": 1.3685085172296227e-09
+          }
+        }
+      ],
+      "reference_gamma_finite_difference": {
+        "0.001": 13.940165383807823,
+        "0.0003": 13.940163690051579,
+        "0.0001": 13.940162624237473
+      }
+    },
+    "Mf_summary": {
+      "metadata": {
+        "domain": "Mf",
+        "coordinates": "x,w",
+        "box": [
+          -0.5,
+          1.1,
+          -0.95,
+          -0.5
+        ],
+        "epsilon": 0.1,
+        "grid": [
+          65,
+          65
+        ],
+        "ode": {
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "max_step": 0.05
+        },
+        "noise": "isotropic sqrt(2*sigma) in original x,y, transformed with Ito correction",
+        "gamma_operator": "d_xx + 2(x^2-1)d_xw + ((x^2-1)^2+epsilon^2)d_ww + 2x d_w",
+        "reference_point": [
+          0.0,
+          -0.75
+        ],
+        "all_faces_absorbing": true
+      },
+      "reference": {
+        "E0": 0.05150886291525243,
+        "Gamma": -0.061390693198750776,
+        "D": -0.003446455156300821,
+        "face": 0
+      },
+      "reference_gamma_finite_difference": {
+        "0.001": -0.06139070168886818,
+        "0.0003": -0.061390668474696035,
+        "0.0001": -0.0613906148139165
+      },
+      "checks": [
+        {
+          "point": [
+            0.62,
+            -0.9465384615384616
+          ],
+          "tight": {
+            "E0": 0.0865680952218337,
+            "Gamma": 195497.13377435663,
+            "D": 29558.329301264966,
+            "face": 2
+          },
+          "scaled_errors": {
+            "E0": 3.772357287656902e-10,
+            "Gamma": 8.763002141303923e-08,
+            "D": 9.449560810974591e-08
+          }
+        },
+        {
+          "point": [
+            0.6938461538461538,
+            -0.5657692307692308
+          ],
+          "tight": {
+            "E0": 2.047780977137717,
+            "Gamma": -2217.9203670533607,
+            "D": -223.23779090311288,
+            "face": 0
+          },
+          "scaled_errors": {
+            "E0": 1.728533224768237e-11,
+            "Gamma": 1.0345096605104423e-09,
+            "D": 1.7495545697074652e-09
+          }
+        }
+      ],
+      "fields": {
+        "Gamma": {
+          "minimum": -2217.9203647589006,
+          "maximum": 195497.15090577464,
+          "finite": 4225
+        },
+        "D": {
+          "minimum": -223.23779051254618,
+          "maximum": 29558.33209439727,
+          "finite": 4225
+        }
+      }
+    },
+    "integral_validation": {
+      "point": [
+        -1.6,
+        0.1
+      ],
+      "D": 49.66086799732023,
+      "finite_difference_integrals": {
+        "16": 49.660865935498066,
+        "32": 49.66086577756323
+      },
+      "relative_error": 4.469831257383763e-08
+    },
+    "solver_verification": {
+      "zero_noise_checks": [
+        {
+          "label": "S1",
+          "zero_noise_exit_error": 9.687885983211686e-06,
+          "h": 1e-05
+        },
+        {
+          "label": "S2",
+          "zero_noise_exit_error": 6.0034130529018626e-06,
+          "h": 1e-05
+        },
+        {
+          "label": "S3",
+          "zero_noise_exit_error": 1.6177796534622146e-06,
+          "h": 1e-05
+        },
+        {
+          "label": "F+",
+          "zero_noise_exit_error": 6.307391806070761e-07,
+          "h": 1e-06
+        },
+        {
+          "label": "F0",
+          "zero_noise_exit_error": 9.43170304440466e-07,
+          "h": 1e-06
+        },
+        {
+          "label": "F-",
+          "zero_noise_exit_error": 8.198304521679634e-07,
+          "h": 1e-06
+        }
+      ],
+      "zero_D_independent_integral": -2.7074904100717187e-09
+    }
+  }
+}
