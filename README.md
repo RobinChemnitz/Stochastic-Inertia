@@ -4,6 +4,9 @@ Code and numerical data for the van der Pol example in the manuscript.
 The repository is self-contained: it does not import the earlier exploratory
 studies or require the manuscript sources.
 
+## AI declaration
+This repository and the filed within in have been generated using ChatGPT 6 Astra. The code has been verified by the authors who are solely responsible for the its content.
+
 ## Reproduce the figures
 
 Use Python 3.12 with the versions recorded in `requirements.txt`:
